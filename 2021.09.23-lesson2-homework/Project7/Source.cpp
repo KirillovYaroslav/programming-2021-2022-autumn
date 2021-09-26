@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-    int n = 0;//шир
-    int m = 0;//длин
-    int k = 0;//к-во долек
+    int n = 0;
+    int m = 0;
+    int k = 0;
 
     cin >> n >> m >> k;
 
