@@ -19,6 +19,7 @@ int sred(int a, int b, int c)
 	}
 
 }
+
 int main(int argc, char* argv[])
 {
 	int a = 0;
