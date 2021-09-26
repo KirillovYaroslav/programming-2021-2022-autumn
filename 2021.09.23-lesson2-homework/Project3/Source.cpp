@@ -4,11 +4,11 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int k = 0;//котлет на сковороде
-	int m = 0;//минут жарить
-	int n = 0;//всего котлет
-	int promejutok = 0;//котлет не поместившехся на сковороду после кого-то к-ва операций
-	int time = 0;//итоговое время
+	int k = 0;
+	int m = 0;
+	int n = 0;
+	int promejutok = 0;
+	int time = 0;
 
 	cin >> k >> m >> n;
 
