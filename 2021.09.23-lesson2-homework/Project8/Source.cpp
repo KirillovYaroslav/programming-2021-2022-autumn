@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 int sred(int a, int b, int c)
 {
 	if ((b >= a && a >= c) || (c >= a && a >= b))
