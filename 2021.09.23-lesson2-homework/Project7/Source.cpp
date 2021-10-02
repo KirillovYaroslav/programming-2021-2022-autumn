@@ -10,20 +10,13 @@ int main()
 
     cin >> n >> m >> k;
 
-    if (k % n == 0 && k / n <= m && k != m * n)
+    if ((k % n == 0 && k / n <= m && k != m * n) || (k % m == 0 && k / m <= n && k != m * n))
     {
         cout << "YES";
     }
     else
     {
-        if (k % m == 0 && k / m <= n && k != m * n)
-        {
-            cout << "YES";
-        }
-        else
-        {
-            cout << "NO";
-        }
+         cout << "NO";
     }
 
     return EXIT_SUCCESS;
