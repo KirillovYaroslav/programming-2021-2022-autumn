@@ -4,16 +4,18 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int k = ;
-	cin >> k;
-	if (k > 30000)
+	int n = 0;
+	int k = 0;
+
+	cin >> n >> k;
+
+	if (n > 30000)
 	{
 		return EXIT_SUCCESS;
 	}
 	else
 	{
-		k += 4;
-		if (k % 4 == 0)
+		if (4 * n - 4 == k)
 		{
 			cout << "YES";
 		}
