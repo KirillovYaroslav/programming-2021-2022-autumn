@@ -5,30 +5,12 @@ using namespace std;
 
 int main()
 {
-    int n = 0;
-    int k = 0;
-    int t = 0;
+    int a = 0;
+    int b = 0;
 
-    cin >> n;
+    cin >> a >> b;
 
-    ++k;
-    ++t;
-    while (t <= n)
-    {
-        int sc = k;
-        while (sc != 0)
-        {
-            --sc;
-            if (t > n)
-            {
-                return EXIT_SUCCESS;
-            }
-            cout << setw(4) << t << " ";
-            ++t;
-        }
-        cout << endl;
-        ++k;
-    }
+    cout << (a * (a / b) + b * (b / a)) / (b / a + a / b);
 
     return EXIT_SUCCESS;
 }
