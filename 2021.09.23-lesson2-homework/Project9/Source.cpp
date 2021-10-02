@@ -2,64 +2,52 @@
 
 using namespace std;
 
+
 int main(int argc, char* argv[])
 {
-	int M = 0;
-	int N = 0;
-	int x = 0;
-	int y = 0;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int sred = 0;
+	cin >> a >> b >> c;
 
-	cin >> M >> N >> x >> y;
-
-	if (x > M || M > 109 || x < 1 || y > N || y < 1 || N > 109)
+	if ((b >= a && a >= c) || (c >= a && a >= b))
 	{
-		return EXIT_SUCCESS;
+		sred = a;
 	}
 	else
 	{
-		if (x == 1)
+		if ((a >= b && b >= c) || (c >= b && b >= a))
 		{
-			if (y == 1)
-			{
-				cout << x << " " << y + 1 <<endl << x+1 << y;
-			}
-			else if (y == N)
-			{
-				cout << x << " " << y - 1 << endl << x + 1 << y;
-			}
-			else
-			{
-				cout << x << " " << y - 1 << endl << x + 1 << " " << y << endl << x << " " << y+1;
-			}
-		}
-		else if (x == M)
-		{
-			if (y == 1)
-			{
-				cout << x << " " << y + 1 << endl << x - 1 << " " << y;
-			}
-			else if (y == N)
-			{
-				cout << x << y - 1 << endl << x - 1 << " " << y;
-			}
-			else
-			{
-				cout << x << " " << y - 1 << endl << x - 1 << " " << y << endl << x << " " << y + 1;
-			}
-		}
-		else if (y == 1)
-		{
-			cout << x << " " << y + 1 << endl << x - 1 << " " << y << endl << x + 1 << " " << y;
-		}
-		else if (y == N)
-		{
-			cout << x << " " << y - 1 << endl << x - 1 << " " << y << endl << x + 1 << " " << y;
+			sred = b;
 		}
 		else
 		{
-			cout << x << " " << y - 1 << endl << x - 1 << " " << y << endl << x + 1 << " " << y << endl << x << " " << y + 1;
+			sred = c;
 		}
+	}
 
+	if (a < b + c && b < a + c && c < a + b)
+	{
+		if ((-max(a, max(b, c)) * max(a, max(b, c)) + sred(a, b, c) * sred(a, b, c) + min(a, min(b, c)) * min(a, min(b, c))) < 0)
+		{
+			cout << "obtuse";
+		}
+		else
+		{
+			if ((-max(a, max(b, c)) * max(a, max(b, c)) + sred(a, b, c) * sred(a, b, c) + min(a, min(b, c)) * min(a, min(b, c))) > 0)
+			{
+				cout << "acute";
+			}
+			else
+			{
+				cout << "right";
+			}
+		}
+	}
+	else
+	{
+		cout << "impossible";
 	}
 
 	return EXIT_SUCCESS;
