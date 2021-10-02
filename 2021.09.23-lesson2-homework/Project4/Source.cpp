@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 	cin >> a >> b >> c >> d;
 	if (c == 0 && d == 0)
 	{
-		return EXIT_SUCCESS;
+		cout << "NO";
 	}
 	else
 	{
