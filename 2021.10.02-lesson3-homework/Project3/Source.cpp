@@ -23,7 +23,7 @@ int main()
             {
                 return EXIT_SUCCESS;
             }
-            cout << setw(4) << t << " ";
+            cout << setw(1) << t << " ";
             ++t;
         }
         cout << endl;
