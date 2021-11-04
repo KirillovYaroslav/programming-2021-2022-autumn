@@ -145,6 +145,7 @@ int main(int argc, char* argv[])
 				}
 				delete[] arr;
 				arr = newarr;
+				break;
 			}
 		}
 
