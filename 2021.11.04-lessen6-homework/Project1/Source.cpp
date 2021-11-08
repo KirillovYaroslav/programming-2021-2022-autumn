@@ -30,9 +30,10 @@ int main(int argc, char* argv[])
 		
 		switch (c)
 		{
-			//0
+			//0/
 			case 48:
 			{
+				delete[] arr;
 				ex = true;
 				break;
 			}
