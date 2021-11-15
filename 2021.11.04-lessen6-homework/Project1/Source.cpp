@@ -33,6 +33,7 @@ int main(int argc, char* argv[])
 			//0
 			case 48:
 			{
+				delete[] arr;
 				ex = true;
 				break;
 			}
