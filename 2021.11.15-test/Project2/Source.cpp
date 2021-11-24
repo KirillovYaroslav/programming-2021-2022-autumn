@@ -6,11 +6,7 @@ int main(int argc, char* argv[])
 {
 	int n = 0;
 	cin >> n;
-	if (n < 2 || n>200000)
-	{
-		return EXIT_SUCCESS;
-	}
-	else
+	if(n>=2 && n<=200000)
 	{
 		int* A = new int[n] { 0 };
 		for (int i = 0; i < n; ++i)
