@@ -2,24 +2,19 @@
 
 using namespace std;
 
-int main(int argc, char* argv[])
+int main()
 {
 	int a = 0;
 	int b = 0;
-
 	cin >> a >> b;
 
-	for (int i = a; i <= b; ++i)
+	for (int i = 0; i * i <= b; ++i)
 	{
-		for (int j = 1; j < i; ++j)
+		if (i * i >= a)
 		{
-			if (j * j == i)
-			{
-				cout << i << " ";
-				break;
-			}
+			cout << i * i << ' ';
 		}
 	}
-
-	return EXIT_SUCCESS;
+	cout << endl;
+	return 0;
 }

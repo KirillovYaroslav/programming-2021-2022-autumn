@@ -21,7 +21,7 @@ int main()
             --sc;
             if (t > n)
             {
-                return EXIT_SUCCESS;
+                break;
             }
             cout << setw(1) << t << " ";
             ++t;
