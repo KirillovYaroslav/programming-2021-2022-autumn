@@ -5,12 +5,12 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int r;
+	int r = 0;
 	cin >> r;
 	circle(r);
 	cout << endl << endl;
 	
-	int a;
+	int a = 0;
 	cin >> a;
 	cout << threenplusone(a);
 
