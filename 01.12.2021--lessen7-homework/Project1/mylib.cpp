@@ -21,24 +21,23 @@ void circle(int r)
 	}
 }
 
-int sc = 0;
+
 
 int threenplusone(int a)
 {
-	if (a % 2 == 0)
+	int sc = 0;
+
+	while (a != 1)
 	{
-		a = a / 2;
+		if (a % 2)
+		{
+			a = 3 * a + 1;
+		}
+		else
+		{
+			a = a / 2;
+		}
 		sc++;
-		return threenplusone(a);
 	}
-	else if (a != 1 && a % 2 == 1)
-	{
-		a = a * 3 + 1;
-		sc++;
-		return threenplusone(a);
-	}
-	else
-	{
-		return sc;
-	}
+	return sc;
 }
