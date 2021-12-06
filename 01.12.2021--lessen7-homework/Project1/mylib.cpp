@@ -8,7 +8,7 @@ void circle(int r)
 	{
 		for (int j = 0; j <= 2 * r; ++j)
 		{
-			if (r * r == (i - r) * (i - r) + (j - r) * (j - r))
+			if (abs(- r * r + (i - r) * (i - r) + (j - r) * (j - r)) <= 3)
 			{
 				cout << '*';
 			}
