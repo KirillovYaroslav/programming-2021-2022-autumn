@@ -86,7 +86,7 @@ complnum operator/(const complnum& comp1, const complnum& comp2)
 	return complnum((comp1.a * comp2.a + comp1.b * comp2.b) / (comp2.a * comp2.a + comp2.b * comp2.b), (-comp1.a * comp2.b + comp1.b * comp2.a) / (comp2.a * comp2.a + comp2.b * comp2.b));
 }
 
-double complnum::abc()
+double complnum::abs()
 {
 	return sqrt(this->a * this->a + this->b * this->b);
 }

@@ -13,13 +13,11 @@ public:
 	
 	double getA();
 	void setA(double a);
-
 	double getB();
 	void setB(double b);
 	void set(double a, double b);
 
 	void print();
-	
 
 	void operator=(const complnum& comp);
 	friend complnum operator+(const complnum& comp1, const complnum& comp2);
@@ -30,9 +28,8 @@ public:
 	friend complnum operator/(const complnum& comp1, const complnum& comp2);
 	friend std::ostream& operator<< (std::ostream& stream, const complnum& comp);
 
-	double abc();
+	double abs();
 	double arg();
-	
 	complnum reverse();
 	void trigprint();
 	complnum deg(int n);
