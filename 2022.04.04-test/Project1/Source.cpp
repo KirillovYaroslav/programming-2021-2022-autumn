@@ -9,8 +9,8 @@ int main()
 	cout << fr1 * fr2 << endl;
 	cout << fr1 / fr2 << endl;
 	cout << 1 / (3 * fr1 + 4 * fr2) << endl;
-	cout << fr1.abs() << endl; 
-	cout << fr1.reverse() << endl; 
+	cout << fr1.abs() << endl;
+	cout << fr1.reverse() << endl;
 	cout << fr1.pow(3) << endl;
 	cout << fr1 - 3;
 	return 0;

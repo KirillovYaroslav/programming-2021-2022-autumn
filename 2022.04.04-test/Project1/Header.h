@@ -47,4 +47,3 @@ public:
 	fraction norm();
 	fraction pow(long long n);
 };
-

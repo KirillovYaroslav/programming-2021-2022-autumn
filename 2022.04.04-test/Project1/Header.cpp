@@ -2,10 +2,10 @@
 #include <iostream>
 
 
-fraction::fraction():numerator(0), denominator(1) {}
-fraction::fraction(long long numerator, long long denominator): numerator(numerator), denominator(denominator){}
+fraction::fraction() :numerator(0), denominator(1) {}
+fraction::fraction(long long numerator, long long denominator) : numerator(numerator), denominator(denominator) {}
 
-fraction::fraction(const fraction& dr): numerator(dr.numerator), denominator(dr.denominator) {}
+fraction::fraction(const fraction& dr) : numerator(dr.numerator), denominator(dr.denominator) {}
 
 
 
@@ -58,7 +58,7 @@ fraction fraction::abs()
 	{
 		return fraction(-this->numerator, this->denominator);
 	}
-	
+
 }
 
 fraction fraction::reverse()
@@ -75,35 +75,35 @@ fraction fraction::pow(long long n)
 		p *= this->numerator;
 		q *= this->denominator;
 	}
-	return fraction(p,q);
+	return fraction(p, q);
 }
 
 long long fraction::gcd()
 {
-		long long P = 0;
-		int Q = 0;
-		P = this->numerator;
-		Q = this->denominator;
-		if (P < 0)
+	long long P = 0;
+	int Q = 0;
+	P = this->numerator;
+	Q = this->denominator;
+	if (P < 0)
+	{
+		P = P * (-1);
+	}
+	if (Q < 0)
+	{
+		Q = Q * (-1);
+	}
+	while (P != Q)
+	{
+		if (P > Q)
 		{
-			P = P * (-1);
+			P -= Q;
 		}
-		if (Q < 0)
+		else
 		{
-			Q = Q * (-1);
+			Q -= P;
 		}
-		while (P != Q)
-		{
-			if (P > Q)
-			{
-				P -= Q;
-			}
-			else
-			{
-				Q -= P;
-			}
-		}
-		return P;
+	}
+	return P;
 }
 
 
@@ -145,9 +145,9 @@ fraction fraction::norm()
 
 std::ostream& operator<<(std::ostream& stream, const fraction& dr)
 {
-	if (dr.numerator!=0 &&  dr.denominator != 0 && dr.denominator != 1 && dr.denominator != -1)
+	if (dr.numerator != 0 && dr.denominator != 0 && dr.denominator != 1 && dr.denominator != -1)
 	{
-		stream<< dr.numerator<<" / "<< dr.denominator;
+		stream << dr.numerator << " / " << dr.denominator;
 	}
 	else if (dr.numerator != 0 && dr.denominator == 1)
 	{
@@ -161,7 +161,7 @@ std::ostream& operator<<(std::ostream& stream, const fraction& dr)
 	{
 		stream << 0;
 	}
-	else if(dr.denominator == 0)
+	else if (dr.denominator == 0)
 	{
 		stream << " uncertainty ";
 	}
@@ -174,7 +174,7 @@ bool operator==(const fraction& dr1, const fraction& dr2)
 	long long a2 = 0;
 	long long a3 = 0;
 	long long a4 = 0;
-	
+
 	a1 = dr1.numerator;
 	a2 = dr2.numerator;
 	a3 = dr1.denominator;
@@ -315,10 +315,10 @@ fraction operator-(const long long cons, const fraction& dr)
 
 fraction operator*(const fraction& dr1, const fraction& dr2)
 {
-	
+
 	fraction fr(dr1.numerator * dr2.numerator, dr1.denominator * dr2.denominator);
 	return fr.norm();
-	
+
 }
 
 fraction operator*(const fraction& dr, const long long cons)
@@ -336,7 +336,7 @@ fraction operator*(const long long cons, const fraction& dr)
 
 fraction operator/(const fraction& dr1, const fraction& dr2)
 {
-	fraction fr(dr1.numerator *dr2.denominator, dr1.denominator *dr2.numerator);
+	fraction fr(dr1.numerator * dr2.denominator, dr1.denominator * dr2.numerator);
 	return fr.norm();
 }
 
@@ -351,4 +351,3 @@ fraction operator/(const long long cons, const fraction& dr)
 	fraction fr(cons * dr.denominator, dr.numerator);
 	return fr.norm();
 }
-
