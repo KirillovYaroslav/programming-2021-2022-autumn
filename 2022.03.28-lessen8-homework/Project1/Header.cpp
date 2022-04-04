@@ -9,8 +9,8 @@ complnum::complnum(const complnum& comp) : a(comp.a), b(comp.b) {}
 
 complnum::~complnum()
 {
-	a = 0;
-	b = 0;
+	this->a = 0;
+	this->b = 0;
 }
 
 
